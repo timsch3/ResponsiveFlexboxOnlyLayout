@@ -6,20 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/styling.css" />
-    <title>Document</title>
+    <script src="js/main.js" defer></script>
+    <title>Tim Schilling | Software Developer & Musician</title>
   </head>
   <body>
     <header>
       <h1>Welcome! Browse my work:</h1>
     </header>
     <main>
-      <div id="categories-wrapper">
-        <ul id="categories">
-          <li>Web Development ↓</li>
-          <li>Game Development ↓</li>
-          <li>Music ↓</li>
+      <section data-opened>
+        <h2 onclick="openCategory(this)">Web Development <span>↓</span></h2>
+        <ul>
+          <li>Small tools and games</li>
+          <li>Projects using APIs</li>
+          <li>Fullstack projects</li>
+          <li>Small tools and games</li>
+          <li>Projects using APIs</li>
+          <li>Fullstack projects</li>
         </ul>
-      </div>
+      </section>
+      <section data-opened>
+        <h2 onclick="openCategory(this)">Game Development <span>↓</span></h2>
+        <ul>
+          <li>Small tools and games</li>
+          <li>Projects using APIs</li>
+          <li>Fullstack projects</li>
+          <li>Small tools and games</li>
+          <li>Projects using APIs</li>
+          <li>Fullstack projects</li>
+          <li>Small tools and games</li>
+          <li>Projects using APIs</li>
+          <li>Fullstack projects</li>
+          <li>Small tools and games</li>
+        </ul>
+      </section>
+      <section data-opened>
+        <h2 onclick="openCategory(this)">Music <span>↓</span></h2>
+        <ul>
+          <li>Small tools and games</li>
+          <li>Projects using APIs</li>
+          <li>Fullstack projects</li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>

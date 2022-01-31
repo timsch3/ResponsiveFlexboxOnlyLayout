@@ -11,10 +11,11 @@
 h1 {
   text-align: center;
   padding: 2rem var(--side-margin);
+  font-size: clamp(2.2rem, 10vmin, 4rem);
+  line-height: clamp(2.2rem, 10vmin, 4rem);
 }
 
-#categories {
-  list-style: none;
+main {
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -24,9 +25,36 @@ h1 {
   --modifier: calc((var(--breakpoint) - 100%) * 999);
 }
 
-#categories > li {
+/* ==================================================================================================== CATEGORIES */
+
+main > section {
   text-align: center;
-  line-height: 4rem;
   margin: 0 var(--side-margin);
   flex-basis: max(calc(33.333% - var(--side-margin) * 2), var(--modifier));
+}
+
+main > section > h2 {
+  line-height: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+main > section > h2 > span {
+  display: inline-block;
+}
+
+main > section > ul {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  max-height: 0;
+}
+
+main > section > ul > li {
+  text-align: left;
+  grid-column: 2 / 3;
+  line-height: 2rem;
 }
