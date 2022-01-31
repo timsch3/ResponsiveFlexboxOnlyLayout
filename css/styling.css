@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap");
+
+* {
+  font: 400 1rem Montserrat, sans-serif;
+  background-color: #eee;
+  color: #111;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 10vmin, 4rem);
+  line-height: clamp(2.2rem, 10vmin, 4rem);
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+
+#categories > li {
+  background-color: #ddd;
+  font-size: 1.3rem;
+  font-weight: 900;
+}

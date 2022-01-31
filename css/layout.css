@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --side-margin: 0.5rem;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem var(--side-margin);
+}
+
+#categories {
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  --breakpoint: 1200px;
+  max-width: calc(var(--breakpoint) + 400px);
+  --modifier: calc((var(--breakpoint) - 100%) * 999);
+}
+
+#categories > li {
+  text-align: center;
+  line-height: 4rem;
+  margin: 0 var(--side-margin);
+  flex-basis: max(calc(33.333% - var(--side-margin) * 2), var(--modifier));
+}
