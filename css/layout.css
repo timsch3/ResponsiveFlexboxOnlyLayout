@@ -43,9 +43,8 @@ main > section > h2 > span {
   display: inline-block;
 }
 
-main > section > ul {
-  display: grid;
-  grid-template-columns: 1fr max-content 1fr;
+main > section > .content-container {
+  list-style: none;
   padding: 1rem 0;
   position: relative;
   z-index: 1;
@@ -53,8 +52,14 @@ main > section > ul {
   max-height: 0;
 }
 
-main > section > ul > li {
+main > section > .content-container > li {
+  max-width: max-content;
+  padding: 1rem;
   text-align: left;
-  grid-column: 2 / 3;
+  margin-left: 4rem;
   line-height: 2rem;
+}
+
+main > section > .content-container .nav-button {
+  cursor: pointer;
 }

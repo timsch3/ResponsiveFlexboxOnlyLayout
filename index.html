@@ -16,38 +16,49 @@
     <main>
       <section data-opened>
         <h2 onclick="openCategory(this)">Web Development <span>↓</span></h2>
-        <ul>
-          <li>Small tools and games</li>
-          <li>Projects using APIs</li>
-          <li>Fullstack projects</li>
-          <li>Small tools and games</li>
-          <li>Projects using APIs</li>
-          <li>Fullstack projects</li>
-        </ul>
       </section>
       <section data-opened>
         <h2 onclick="openCategory(this)">Game Development <span>↓</span></h2>
-        <ul>
-          <li>Small tools and games</li>
-          <li>Projects using APIs</li>
-          <li>Fullstack projects</li>
-          <li>Small tools and games</li>
-          <li>Projects using APIs</li>
-          <li>Fullstack projects</li>
-          <li>Small tools and games</li>
-          <li>Projects using APIs</li>
-          <li>Fullstack projects</li>
-          <li>Small tools and games</li>
-        </ul>
       </section>
       <section data-opened>
         <h2 onclick="openCategory(this)">Music <span>↓</span></h2>
-        <ul>
-          <li>Small tools and games</li>
-          <li>Projects using APIs</li>
-          <li>Fullstack projects</li>
-        </ul>
       </section>
     </main>
+
+    <!-- content templates -->
+
+    <template id="0">
+      <ul class="content-container">
+        <li class="nav-button" onclick="loadContent('0.1')">Small tools</li>
+        <li>Projects using APIs</li>
+        <li>Fullstack projects</li>
+      </ul>
+    </template>
+
+    <template id="0.1">
+      <ul class="content-container">
+        <li class="nav-button" onclick="loadContent('0')">back</li>
+        <li>Small tools</li>
+        <li>Pomodoro clock</li>
+        <li>This functional and stylish pomodoro clock is mobile ready.</li>
+      </ul>
+    </template>
+
+    <template id="1">
+      <ul class="content-container">
+        <li>Browser games</li>
+        <li>Made with Godot Game Engine</li>
+      </ul>
+    </template>
+
+    <template id="2">
+      <ul class="content-container">
+        <li>Jazzy, bluesy, souly</li>
+        <li>Electro Punk</li>
+        <li>Rock songs</li>
+        <li>Pianotronic</li>
+        <li>Demos</li>
+      </ul>
+    </template>
   </body>
 </html>

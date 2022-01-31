@@ -15,10 +15,15 @@ main > section > h2 > span {
   transition: transform 150ms;
 }
 
-main > section > ul {
+main > section > .content-container {
   --height-transition: 0ms; /* set through JS */
   transition: max-height var(--height-transition),
     opacity var(--height-transition);
+}
+
+main > section > .content-container .nav-button:hover {
+  background-color: #111;
+  color: #eee;
 }
 
 main > section > h2,
