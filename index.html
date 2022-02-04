@@ -15,17 +15,17 @@
     </header>
     <main>
       <section data-opened>
-        <h2 class="nav-button 0 1 test" onclick="openCategory(this)">
+        <h2 class="category" onclick="openCategory(this)">
           Web Development <span>↓</span>
         </h2>
       </section>
       <section data-opened>
-        <h2 class="nav-button" onclick="openCategory(this)">
+        <h2 class="category" onclick="openCategory(this)">
           Game Development <span>↓</span>
         </h2>
       </section>
       <section data-opened>
-        <h2 class="nav-button" onclick="openCategory(this)">
+        <h2 class="category" onclick="openCategory(this)">
           Music <span>↓</span>
         </h2>
       </section>
@@ -35,7 +35,7 @@
 
     <template id="0">
       <ul class="content-container 0">
-        <li class="nav-button" onclick="loadContent('0.1')">Small tools</li>
+        <li class="button" onclick="loadContent('0.1')">Small tools</li>
         <li>Projects using APIs</li>
         <li>Fullstack projects</li>
       </ul>
@@ -43,7 +43,7 @@
 
     <template id="0.1">
       <ul class="content-container 0.1">
-        <li class="nav-button" onclick="loadContent('0')">back</li>
+        <li class="button" onclick="loadContent('0')">back</li>
         <li>Small tools</li>
         <li>Pomodoro clock</li>
         <li>This functional and stylish pomodoro clock is mobile ready.</li>

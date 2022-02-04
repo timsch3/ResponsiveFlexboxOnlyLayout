@@ -2,8 +2,8 @@
 
 :root {
   --bg-clr: hsl(0, 0%, 95%);
+  --bg-clr2: hsl(0, 0%, 85%);
   --txt-clr: hsl(0, 0%, 5%);
-  --btn-bg-clr: hsl(0, 0%, 85%);
 }
 
 * {
@@ -26,24 +26,30 @@ main > section > .content-container {
   transition: max-height 200ms, padding 200ms, opacity 100ms;
 }
 
-.nav-button,
-.nav-button > span {
-  transition: line-height 200ms, transform 200ms, background-color 100ms;
-  background-color: var(--btn-bg-clr);
+.category,
+.category > span {
+  background-color: var(--bg-clr2);
   color: var(--txt-clr);
-}
-
-.nav-button:hover,
-.nav-button:hover > span {
-  background-color: var(--txt-clr);
-  color: var(--btn-bg-clr);
-}
-
-main > section > h2,
-main > section > h2 > span {
-  background-color: var(--btn-bg-clr);
   font-size: 1.3rem;
   font-weight: 900;
   cursor: pointer;
-  user-select: none;
+  transition: line-height 200ms, transform 200ms, background-color 100ms;
+}
+
+.category:hover,
+.category:hover > span {
+  background-color: var(--txt-clr);
+  color: var(--bg-clr2);
+}
+
+.button {
+  border: 2px solid var(--bg-clr2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: line-height 200ms, transform 200ms, background-color 100ms;
+}
+
+.button:hover {
+  background-color: var(--txt-clr);
+  color: var(--bg-clr2);
 }
