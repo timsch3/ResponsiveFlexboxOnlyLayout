@@ -1,8 +1,14 @@
 const sections = document.querySelectorAll("section");
+const headerHeight = document.querySelector("header").offsetHeight;
+const viewportHeight = window.innerHeight;
 
 sections.forEach((section, index) => {
+  // set initial contents
   const clone = document.getElementById(String(index)).content.cloneNode(true);
   section.appendChild(clone);
+  // set category title heights according to number of sections
+  section.querySelector("h2").style.lineHeight =
+    (viewportHeight - headerHeight - 100) / sections.length + "px";
 });
 
 function openCategory(title) {
@@ -11,16 +17,15 @@ function openCategory(title) {
   const contentContainer = section.querySelector(".content-container");
 
   if (section.dataset.opened != "true") {
+    contentContainer.style.display = "block";
+    title.style.lineHeight = "4rem";
     span.style.transform = "rotateZ(-180deg)";
-    contentContainer.style.opacity = "1";
-    contentContainer.style.setProperty("--height-transition", "400ms");
-    contentContainer.style.maxHeight = "1000px";
     section.dataset.opened = "true";
   } else {
+    contentContainer.style.display = "none";
+    title.style.lineHeight =
+      (viewportHeight - headerHeight - 100) / sections.length + "px";
     span.style.transform = "rotateZ(0deg)";
-    contentContainer.style.opacity = "0";
-    contentContainer.style.setProperty("--height-transition", "150ms");
-    contentContainer.style.maxHeight = "0";
     section.dataset.opened = "false";
   }
 }

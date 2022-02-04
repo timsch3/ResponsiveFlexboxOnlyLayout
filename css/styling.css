@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap");
 
+:root {
+  --bg-clr: hsl(0, 0%, 95%);
+  --txt-clr: hsl(0, 0%, 5%);
+  --btn-bg-clr: hsl(0, 0%, 85%);
+}
+
 * {
   font: 400 1rem Montserrat, sans-serif;
-  background-color: #eee;
-  color: #111;
+  background-color: var(--bg-clr);
+  color: var(--txt-clr);
 }
 
 h1 {
@@ -16,19 +22,27 @@ main > section > h2 > span {
 }
 
 main > section > .content-container {
-  --height-transition: 0ms; /* set through JS */
-  transition: max-height var(--height-transition),
-    opacity var(--height-transition);
+  border-left: 5px solid var(--btn-bg-clr);
+  border-right: 5px solid var(--btn-bg-clr);
+  border-bottom: 5px solid var(--btn-bg-clr);
 }
 
-main > section > .content-container .nav-button:hover {
-  background-color: #111;
-  color: #eee;
+.nav-button,
+.nav-button > span {
+  transition: 200ms;
+  background-color: var(--btn-bg-clr);
+  color: var(--txt-clr);
+}
+
+.nav-button:hover,
+.nav-button:hover > span {
+  background-color: var(--txt-clr);
+  color: var(--btn-bg-clr);
 }
 
 main > section > h2,
 main > section > h2 > span {
-  background-color: #ddd;
+  background-color: var(--btn-bg-clr);
   font-size: 1.3rem;
   font-weight: 900;
   cursor: pointer;

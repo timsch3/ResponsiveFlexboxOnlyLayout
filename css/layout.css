@@ -29,14 +29,8 @@ main {
 
 main > section {
   text-align: center;
-  margin: 0 var(--side-margin);
+  margin: 0 var(--side-margin) 1rem var(--side-margin);
   flex-basis: max(calc(33.333% - var(--side-margin) * 2), var(--modifier));
-}
-
-main > section > h2 {
-  line-height: 4rem;
-  position: relative;
-  z-index: 2;
 }
 
 main > section > h2 > span {
@@ -44,12 +38,9 @@ main > section > h2 > span {
 }
 
 main > section > .content-container {
+  display: none;
   list-style: none;
   padding: 1rem 0;
-  position: relative;
-  z-index: 1;
-  opacity: 0;
-  max-height: 0;
 }
 
 main > section > .content-container > li {
