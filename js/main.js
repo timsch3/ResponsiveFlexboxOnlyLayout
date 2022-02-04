@@ -4,11 +4,15 @@ const viewportHeight = window.innerHeight;
 
 sections.forEach((section, index) => {
   // set initial contents
-  const clone = document.getElementById(String(index)).content.cloneNode(true);
+  const clone = document.getElementById(index).content.cloneNode(true);
   section.appendChild(clone);
   // set category title heights according to number of sections
   section.querySelector("h2").style.lineHeight =
-    (viewportHeight - headerHeight - 100) / sections.length + "px";
+    (viewportHeight -
+      headerHeight -
+      20 * sections.length) /* margin bottom per section */ /
+      sections.length +
+    "px";
 });
 
 function openCategory(title) {
@@ -17,15 +21,23 @@ function openCategory(title) {
   const contentContainer = section.querySelector(".content-container");
 
   if (section.dataset.opened != "true") {
-    contentContainer.style.display = "block";
+    contentContainer.style.padding = "1rem 0";
+    contentContainer.style.maxHeight = "9999px";
+    setTimeout(() => {
+      contentContainer.style.maxHeight = `${contentContainer.offsetHeight}px`;
+    }, 200);
+    contentContainer.style.opacity = "1";
     title.style.lineHeight = "4rem";
-    span.style.transform = "rotateZ(-180deg)";
+    span.style.transform = "rotateX(-180deg)";
     section.dataset.opened = "true";
   } else {
-    contentContainer.style.display = "none";
+    contentContainer.style.padding = "0";
+    contentContainer.style.maxHeight = "0";
+    contentContainer.style.opacity = "0";
     title.style.lineHeight =
-      (viewportHeight - headerHeight - 100) / sections.length + "px";
-    span.style.transform = "rotateZ(0deg)";
+      (viewportHeight - headerHeight - 20 * sections.length) / sections.length +
+      "px";
+    span.style.transform = "rotateX(0deg)";
     section.dataset.opened = "false";
   }
 }
@@ -36,7 +48,10 @@ function loadContent(id) {
   const appliedStyles = oldContent.getAttribute("style");
   const newContent = document.getElementById(id).content.cloneNode(true);
   section.replaceChild(newContent, oldContent);
-  section
-    .querySelector(".content-container")
-    .setAttribute("style", appliedStyles);
+  const contentContainer = section.querySelector(".content-container");
+  contentContainer.setAttribute("style", appliedStyles);
+  contentContainer.style.maxHeight = "9999px";
+  setTimeout(() => {
+    contentContainer.style.maxHeight = `${contentContainer.offsetHeight}px`;
+  }, 200);
 }

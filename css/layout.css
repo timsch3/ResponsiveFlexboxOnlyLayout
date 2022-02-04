@@ -29,7 +29,7 @@ main {
 
 main > section {
   text-align: center;
-  margin: 0 var(--side-margin) 1rem var(--side-margin);
+  margin: 0 var(--side-margin) 20px var(--side-margin);
   flex-basis: max(calc(33.333% - var(--side-margin) * 2), var(--modifier));
 }
 
@@ -38,9 +38,11 @@ main > section > h2 > span {
 }
 
 main > section > .content-container {
-  display: none;
   list-style: none;
-  padding: 1rem 0;
+  /* set through JS: */
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
 }
 
 main > section > .content-container > li {

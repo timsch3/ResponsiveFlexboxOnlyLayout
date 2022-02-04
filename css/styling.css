@@ -10,6 +10,7 @@
   font: 400 1rem Montserrat, sans-serif;
   background-color: var(--bg-clr);
   color: var(--txt-clr);
+  user-select: none;
 }
 
 h1 {
@@ -22,14 +23,12 @@ main > section > h2 > span {
 }
 
 main > section > .content-container {
-  border-left: 5px solid var(--btn-bg-clr);
-  border-right: 5px solid var(--btn-bg-clr);
-  border-bottom: 5px solid var(--btn-bg-clr);
+  transition: max-height 200ms, padding 200ms, opacity 100ms;
 }
 
 .nav-button,
 .nav-button > span {
-  transition: 200ms;
+  transition: line-height 200ms, transform 200ms, background-color 100ms;
   background-color: var(--btn-bg-clr);
   color: var(--txt-clr);
 }
