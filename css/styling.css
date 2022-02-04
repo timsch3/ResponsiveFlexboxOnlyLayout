@@ -32,10 +32,10 @@ main > section > .content-container {
   color: var(--txt-clr);
   font-size: 1.3rem;
   font-weight: 900;
+  border-radius: 5px;
   cursor: pointer;
   transition: line-height 200ms, transform 200ms, background-color 100ms;
 }
-
 .category:hover,
 .category:hover > span {
   background-color: var(--txt-clr);
@@ -45,11 +45,10 @@ main > section > .content-container {
 .button {
   border: 2px solid var(--bg-clr2);
   border-radius: 5px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: line-height 200ms, transform 200ms, background-color 100ms;
+  transition: background-color 100ms;
 }
-
 .button:hover {
-  background-color: var(--txt-clr);
-  color: var(--bg-clr2);
+  background-color: var(--bg-clr2);
 }
