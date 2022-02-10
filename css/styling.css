@@ -23,7 +23,7 @@ main > section > h2 > span {
 }
 
 main > section > .content-container {
-  transition: max-height 200ms, padding 200ms, opacity 100ms;
+  transition: max-height 200ms, padding 50ms, opacity 100ms;
 }
 
 .category,
