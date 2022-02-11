@@ -4,4 +4,4 @@
 
 - Reactive content loading through VanillaJS and HTML templates
 
-View here: https://timsch3.github.io/ResponsiveFlexboxOnlyLayout/
+View here: https://timsch3.github.io/ResponsiveReactiveThreeColumnsLayout/
