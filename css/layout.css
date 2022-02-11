@@ -35,12 +35,7 @@ main > section > h2 {
   vertical-align: middle;
 }
 
-main > section > h2 > span {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-main > section > .content-container {
+.content-container {
   list-style: none;
   /* set through JS: */
   padding: 0;
@@ -48,13 +43,17 @@ main > section > .content-container {
   opacity: 0;
 }
 
-main > section > .content-container > li {
-  max-width: max-content;
-  margin: 1rem;
-  text-align: left;
-  margin-left: 4rem;
+.sub-category-title-container {
+  display: flex;
+  align-items: center;
 }
 
-main > section > .content-container .nav-button {
-  cursor: pointer;
+.sub-category-title-container > h3 {
+  flex-grow: 1;
+}
+
+.content-container > li {
+  max-width: max-content;
+  margin: 1.5rem 0;
+  text-align: left;
 }

@@ -7,63 +7,228 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/styling.css" />
     <script src="js/main.js" defer></script>
-    <title>Tim Schilling | Software Developer & Musician</title>
+    <title>Title</title>
   </head>
   <body>
     <header>
-      <h1>Welcome! Browse my work:</h1>
+      <h1>Welcome! Browse:</h1>
     </header>
     <main>
       <section data-opened>
-        <h2 class="category" onclick="toggleCategory(this)">
-          Web Development <span>↓</span>
+        <h2 class="category-title" onclick="toggleCategory(this)">
+          Category One
         </h2>
       </section>
       <section data-opened>
-        <h2 class="category" onclick="toggleCategory(this)">
-          Game Development <span>↓</span>
+        <h2 class="category-title" onclick="toggleCategory(this)">
+          Category Two
         </h2>
       </section>
       <section data-opened>
-        <h2 class="category" onclick="toggleCategory(this)">
-          Music <span>↓</span>
+        <h2 class="category-title" onclick="toggleCategory(this)">
+          Category Three
         </h2>
       </section>
     </main>
 
-    <!-- content templates -->
+    <!-- CONTENT TEMPLATES -->
+
+    <!-- category 1 -->
 
     <template id="0">
       <ul class="content-container 0">
-        <li class="button" onclick="loadContent('0.1')">Small tools</li>
-        <li>Projects using APIs</li>
-        <li>Fullstack projects</li>
+        <li class="button" onclick="loadContent('0.1')">Sub-category One</li>
+        <li class="button" onclick="loadContent('0.2')">Sub-category Two</li>
+        <li class="button" onclick="loadContent('0.3')">Sub-category Three</li>
       </ul>
     </template>
 
     <template id="0.1">
       <ul class="content-container 0.1">
-        <li class="button" onclick="loadContent('0')">←</li>
-        <li>Small tools</li>
-        <li>Pomodoro clock</li>
-        <li>This functional and stylish pomodoro clock is mobile ready.</li>
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('0')">←</div>
+          <h3>Sub-category One</h3>
+        </div>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          tenetur rem doloribus nostrum ad asperiores fugit nam, consequuntur
+          molestiae molestias.
+        </li>
+        <li>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam,
+          molestias quibusdam!
+        </li>
       </ul>
     </template>
+
+    <template id="0.2">
+      <ul class="content-container 0.2">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('0')">←</div>
+          <h3>Sub-category Two</h3>
+        </div>
+        <li>Lorem, ipsum.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+      </ul>
+    </template>
+
+    <template id="0.3">
+      <ul class="content-container 0.3">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('0')">←</div>
+          <h3>Sub-category Three</h3>
+        </div>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga esse
+          placeat ducimus a eius fugiat voluptatum impedit laudantium, explicabo
+          laborum quo amet temporibus est vero magni animi labore in possimus..
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem, unde?
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, minima!
+          Mollitia harum eligendi molestiae unde aspernatur optio reiciendis
+          modi pariatur officiis quod?
+        </li>
+      </ul>
+    </template>
+
+    <!-- category 2 -->
 
     <template id="1">
       <ul class="content-container">
-        <li>Browser games</li>
-        <li>Made with Godot Game Engine</li>
+        <li class="button" onclick="loadContent('1.1')">Sub-category One</li>
+        <li class="button" onclick="loadContent('1.2')">Sub-category Two</li>
       </ul>
     </template>
 
+    <template id="1.1">
+      <ul class="content-container 1.1">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('1')">←</div>
+          <h3>Sub-category One</h3>
+        </div>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+      </ul>
+    </template>
+
+    <template id="1.2">
+      <ul class="content-container 1.2">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('1')">←</div>
+          <h3>Sub-category Two</h3>
+        </div>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti!
+        </li>
+        <li>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus error
+          illo temporibus cumque.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          iste laboriosam corporis dolor deserunt commodi.
+        </li>
+      </ul>
+    </template>
+
+    <!-- category 3 -->
+
     <template id="2">
       <ul class="content-container">
-        <li>Jazzy, bluesy, souly</li>
-        <li>Electro Punk</li>
-        <li>Rock songs</li>
-        <li>Pianotronic</li>
-        <li>Demos</li>
+        <li class="button" onclick="loadContent('2.1')">Sub-category One</li>
+        <li class="button" onclick="loadContent('2.2')">Sub-category Two</li>
+        <li class="button" onclick="loadContent('2.3')">Sub-category Three</li>
+        <li class="button" onclick="loadContent('2.4')">Sub-category Four</li>
+      </ul>
+    </template>
+
+    <template id="2.1">
+      <ul class="content-container 2.1">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('2')">←</div>
+          <h3>Sub-category One</h3>
+        </div>
+        <li>Lorem.</li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+          voluptates inventore repudiandae iure nam tempora sunt eum!
+        </li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+          reiciendis qui pariatur esse vitae provident illum temporibus aut illo
+          recusandae at eaque corporis laboriosam fugit minus, repudiandae nam
+          aliquam odit. Voluptates!
+        </li>
+      </ul>
+    </template>
+
+    <template id="2.2">
+      <ul class="content-container 2.2">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('2')">←</div>
+          <h3>Sub-category Two</h3>
+        </div>
+        <li>Lorem.</li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+          voluptates inventore repudiandae iure nam tempora sunt eum!
+        </li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+          reiciendis qui pariatur esse vitae provident illum temporibus aut illo
+          recusandae at eaque corporis laboriosam fugit minus, repudiandae nam
+          aliquam odit. Voluptates!
+        </li>
+      </ul>
+    </template>
+
+    <template id="2.3">
+      <ul class="content-container 2.3">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('2')">←</div>
+          <h3>Sub-category Three</h3>
+        </div>
+        <li>Lorem.</li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+          voluptates inventore repudiandae iure nam tempora sunt eum!
+        </li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+          reiciendis qui pariatur esse vitae provident illum temporibus aut illo
+          recusandae at eaque corporis laboriosam fugit minus, repudiandae nam
+          aliquam odit. Voluptates!
+        </li>
+      </ul>
+    </template>
+
+    <template id="2.4">
+      <ul class="content-container 2.4">
+        <div class="sub-category-title-container">
+          <div class="button" onclick="loadContent('2')">←</div>
+          <h3>Sub-category Four</h3>
+        </div>
+        <li>Lorem.</li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+          voluptates inventore repudiandae iure nam tempora sunt eum!
+        </li>
+        <li>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+          reiciendis qui pariatur esse vitae provident illum temporibus aut illo
+          recusandae at eaque corporis laboriosam fugit minus, repudiandae nam
+          aliquam odit. Voluptates!
+        </li>
       </ul>
     </template>
   </body>

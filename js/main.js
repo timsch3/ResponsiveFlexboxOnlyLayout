@@ -8,23 +8,21 @@ sections.forEach((section, index) => {
   const clone = document.getElementById(index).content.cloneNode(true);
   section.appendChild(clone);
   // set category title heights according to number of sections
-  setCategoriesHeight(section.querySelector("h2"));
+  setCategoriesHeight(section.querySelector(".category-title"));
 });
 
 function toggleCategory(title) {
   const section = title.parentElement;
-  const span = title.querySelector("span");
   const contentContainer = section.querySelector(".content-container");
 
   if (section.dataset.opened != "true") {
-    contentContainer.style.padding = "1rem 0";
+    contentContainer.style.padding = "1rem 1.5rem";
     contentContainer.style.maxHeight = "9999px";
     setTimeout(() => {
       contentContainer.style.maxHeight = `${contentContainer.offsetHeight}px`;
     }, 200);
     contentContainer.style.opacity = "1";
     title.style.lineHeight = "4rem";
-    span.style.transform = "rotateX(-180deg)";
     section.dataset.opened = "true";
   } else closeCategory(section);
 
@@ -37,14 +35,12 @@ function toggleCategory(title) {
 
 function closeCategory(section) {
   const contentContainer = section.querySelector(".content-container");
-  const title = section.querySelector(".category");
-  const span = section.querySelector("span");
+  const title = section.querySelector(".category-title");
 
   contentContainer.style.padding = "0";
   contentContainer.style.maxHeight = "0";
   contentContainer.style.opacity = "0";
   setCategoriesHeight(title);
-  span.style.transform = "rotateX(0deg)";
   section.dataset.opened = "false";
 }
 

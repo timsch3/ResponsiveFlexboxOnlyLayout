@@ -1,5 +1,7 @@
-Trying out making a fluid responsive design using flexbox and some kind of [albatross](https://www.startpage.com/do/dsearch?query=css+albatross) for my next personal / portfolio page.
+# A responsive and reactive three columns layout
 
-Added reactive content through HTML templates.
+- Fluid responsive design using flexbox and an [albatross](https://www.startpage.com/do/dsearch?query=css+albatross)
+
+- Reactive content loading through VanillaJS and HTML templates
 
 View here: https://timsch3.github.io/ResponsiveFlexboxOnlyLayout/
